@@ -1,0 +1,70 @@
+.table-container {
+  background: white;
+  width: 100%; 
+}
+
+.visitor-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.visitor-table th {
+  padding: 15px 10px;
+  text-align: left;
+  font-weight: bold;
+  color: #4E3000;
+  border-bottom: 2px solid #e0e0e0; 
+}
+
+.visitor-table td {
+  padding: 12px 10px;
+}
+
+.visitor-row {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.visitor-row:hover {
+  background-color: #f8f9fa;
+}
+
+.number-cell {
+  width: 80px;
+  font-weight: bold;
+  color: black;
+}
+
+.name-cell {
+  font-weight: 500;
+  color: black;
+}
+
+.company-cell {
+  color: black;
+  font-style: italic;
+}
+
+.group-cell {
+  color: black;
+  font-weight: 500;
+}
+
+.presence-cell {
+  text-align: center;
+  width: 100px;
+}
+
+.no-visitors {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+  width: 100%;
+}
+.presence-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}

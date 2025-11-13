@@ -1,0 +1,52 @@
+.filter-section {
+  background: white;
+  padding: 0; 
+}
+
+.filter-header {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #4E3000;
+  font-weight: bold;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #4E3000;
+  align-items: center;
+}
+
+.filter-btn {
+  padding: 8px 0;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  color: #4E3000;
+  position: relative;
+}
+
+.filter-btn.active {
+  color: #4E3000;
+  font-weight: bold;
+}
+
+.filter-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #4CAF50;
+}
+
+.clear-btn {
+  color: #666;
+  background-color:#C4C4C4;
+  border-radius:20px ;
+  padding: 8px 12px;
+}
