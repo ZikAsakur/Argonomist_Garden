@@ -1,11 +1,12 @@
 import type { Visitor, VisitorFormData } from '../types/Visitor';
 
-const API_URL = "/api";
+const API_BASE_URL = import.meta.env.PROD ? 'https://agronomist-garden-production.up.railway.app' // Будет ваш URL после деплоя
+  : 'http://localhost:3000';
 
 export const visitorApi = {
     async getVisitors(): Promise<Visitor[]> {
     try {
-      const response = await fetch(`${API_URL}/visitors`);
+      const response = await fetch(`${API_BASE_URL}/visitors`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -17,7 +18,7 @@ export const visitorApi = {
   },
 
     async addVisitor(visitor: VisitorFormData): Promise<Visitor> {
-        const response = await fetch(`${API_URL}/visitors`,{
+        const response = await fetch(`${API_BASE_URL}/visitors`,{
             method:'POST',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({...visitor, id: Date.now().toString()}),
@@ -27,7 +28,7 @@ export const visitorApi = {
     },
 
     async updateVisitor(id: string, visitor: VisitorFormData): Promise<Visitor>{
-        const response = await fetch(`${API_URL}/visitors/${id}`,{
+        const response = await fetch(`${API_BASE_URL}/visitors/${id}`,{
             method:'PUT',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({...visitor, id}),
@@ -38,7 +39,7 @@ export const visitorApi = {
     },
 
     async deleteVisitor(id: string): Promise<void>{
-        const response = await fetch(`${API_URL}/visitors/${id}`,{
+        const response = await fetch(`${API_BASE_URL}/visitors/${id}`,{
             method:'DELETE',
         });
         if (!response.ok) throw new Error('Ошибка при удалении посетителя');

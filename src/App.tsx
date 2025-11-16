@@ -76,14 +76,14 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
-  
+
 
   return (
     <div className='app'>
 
       <header className='app-header'>
         <div className="header-left">
-          <img src="/logo.png" alt="Агрёном Сад" className="logo" />
+          <img src="/Argonomist_Garden/logo.png" alt="Агрёном Сад" className="logo" />
         </div>
         <div className="header-center">
           <div className="search-container">
