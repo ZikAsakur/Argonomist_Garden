@@ -1,6 +1,6 @@
 import type { Visitor, VisitorFormData } from '../types/Visitor';
 
-const API_BASE_URL = import.meta.env.PROD ? 'https://agronomist-garden-production.up.railway.app' // Будет ваш URL после деплоя
+const API_BASE_URL = import.meta.env.PROD ? 'https://argonomistgarden-production.up.railway.app/' // Будет ваш URL после деплоя
   : 'http://localhost:3000';
 
 export const visitorApi = {
