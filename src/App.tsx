@@ -76,6 +76,8 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
+  
+
   return (
     <div className='app'>
 
