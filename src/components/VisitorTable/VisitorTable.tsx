@@ -40,7 +40,7 @@ export const VisitorTable: React.FC<VisitorTableProps> =({
                             <td className="group-cell">{visitor.group}</td>
                              <td className="presence-cell">
                                 <img 
-                                src={visitor.present ? "/presence-icon.png" : "/absence-icon.png"} 
+                                src={visitor.present ? "/Argonomist_Garden/presence-icon.png" : "/Argonomist_Garden/absence-icon.png"} 
                                 alt={visitor.present ? "Присутствует" : "Отсутствует"}
                                 className="presence-icon"
                                 />
